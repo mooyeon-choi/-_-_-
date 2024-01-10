@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 2024년 (주) 두번째 프론트엔드 개발자 채용 과제
 
-## Getting Started
+(주) 두번째 - 하우스텝/반장창고 프론트엔드 개발자 채용 과제 코드입니다.
 
-First, run the development server:
+## 코드 실행
+
+### package install
+
+```bash
+npm install
+```
+
+### json-server 실행
+
+```bash
+npm run server
+```
+
+### Client 개발모드 실행
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 폴더 구조
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+public/
+└ (이미지 파일)
+src/
+├ app/
+│ ├ complete/  * 주문 성공 화면
+│ ├ error/     * 주문 실패 화면
+│ ├ lib/
+│ │ └ registry.tsx   * styled-components 설정 파일
+│ ├ order/     * 주문 화면
+│ │ └ components/
+│ │    └ (navbar, footer 등 주문화면에서 사용하는 공용 컴포넌트)
+│ ├ actions.ts * 주문 화면으로 돌아가는 navigator 설정
+│ └ not-found.tsx    * 없는 url 처리
+├ db/          * 테스트에 사용될 데이터
+└ redux/       * redux 설정
+  ├ features/
+  │ └ cart-slice.ts  * 장바구니 state, reducer 설정
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 참고 사항
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* 주문 아이템의 합계 수량이 0일 경우 주문 실패 화면으로 이동하도록 하였습니다.
