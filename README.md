@@ -29,17 +29,17 @@ public/
 └ (이미지 파일)
 src/
 ├ app/
-│ ├ complete/  * 주문 성공 화면
-│ ├ error/     * 주문 실패 화면
+│ ├ complete/        * 주문 성공 화면
+│ ├ error/           * 주문 실패 화면
 │ ├ lib/
 │ │ └ registry.tsx   * styled-components 설정 파일
-│ ├ order/     * 주문 화면
+│ ├ order/           * 주문 화면
 │ │ └ components/
 │ │    └ (navbar, footer 등 주문화면에서 사용하는 공용 컴포넌트)
-│ ├ actions.ts * 주문 화면으로 돌아가는 navigator 설정
+│ ├ actions.ts       * 주문 화면으로 돌아가는 navigator 설정
 │ └ not-found.tsx    * 없는 url 처리
-├ db/          * 테스트에 사용될 데이터
-└ redux/       * redux 설정
+├ db/                * 테스트에 사용될 데이터
+└ redux/             * redux 설정
   ├ features/
   │ └ cart-slice.ts  * 장바구니 state, reducer 설정
 ```
