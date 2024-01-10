@@ -18,7 +18,7 @@ const TextArea = styled.p`
   margin: 0;
 `
 
-export default function Home() {
+export default function ErrorPage() {
   const [isRedirected, setIsRedirected] = useState(false);
 
   useEffect(() => {

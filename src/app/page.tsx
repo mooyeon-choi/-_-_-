@@ -29,7 +29,7 @@ const EnterButton = styled(Link)`
   margin-top: 30px;
 `
 
-export default function Home() {
+export default function IntroPage() {
   return (
     <Main>
       <Image src="/logo.svg" alt="반장창고 로고" width="150" height="51"></Image>

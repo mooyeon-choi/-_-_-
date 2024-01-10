@@ -15,7 +15,7 @@ const Main = styled.div`
   align-items: center;
 `
 
-export default function Home() {
+export default function Complete() {
   const [isRedirected, setIsRedirected] = useState(false);
 
   useEffect(() => {
